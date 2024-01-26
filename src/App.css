@@ -234,7 +234,7 @@ h1 {
 .add {
   position:fixed;
   left:32px;
-top:55px;
+top:70px;
   background-color: hsl(338, 88%, 50%); /* Green */
   border: none;
   border-radius: 10px;
@@ -258,7 +258,7 @@ top:55px;
   position:fixed;
   left:81%;
   right:0%;
-  top:55px;
+  top:70px;/*55*/
 
   background-color: #1c1c2b; /* Green */
   border: none;
@@ -293,7 +293,7 @@ top:55px;
   position:fixed;
   left:81%;
   right:0%;
-  top:155px;
+  top:170px;
 
   background-color: #1c1c2b; /* Green */
   border: none;
@@ -329,7 +329,7 @@ top:55px;
   
 
   position:fixed;
-  top:175px;
+  top:190px;
   left:32px;
 
   background-color: #1c1c2b; /* Green */
@@ -352,7 +352,7 @@ top:55px;
   
 
   position:fixed;
-  top:115px;
+  top:130px;
   left:32px;
 
   background-color: #1010f0; /* Green */
