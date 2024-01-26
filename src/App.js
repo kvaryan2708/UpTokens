@@ -1076,12 +1076,12 @@ useEffect(() => {
     <div className="App">
     <div className="he"><h1><b>UpTokens</b></h1></div>
       <button className="connect" onClick={loadWeb3} >connect</button>
-      <div className="staked" >Staked: {staked} STK</div>
+      <div className="staked" >Staked: {staked} mSTK</div>
      <div className="add">{account}</div>
 
      
-     <div className="bal"><p>Balance</p>  {balance} STK</div>
-     <div className="rew"><p>Rewards</p> {reward} RWT</div>
+     <div className="bal"><p>Balance</p>  {balance} mSTK</div>
+     <div className="rew"><p>Rewards</p> {reward} mRWT</div>
 <br/><br/>
      {loading ?(
       <div className="popup">Loading  <Spinner animation="border" variant="light" size="sm" className="ms-1" /></div>

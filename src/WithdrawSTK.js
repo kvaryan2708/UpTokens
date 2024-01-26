@@ -43,7 +43,7 @@ function WithdrawSTK({web3,contract1,contract2,contract3,account,address,getBala
 
         <div className="App">
 
-            <div className="ethbal">Balance: {num} STK</div>
+            <div className="ethbal">Balance: {num} mSTK</div>
 
             
              <div>

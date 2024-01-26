@@ -112,7 +112,7 @@ return(
               required="required"
               value={val}
               onChange={(e) => (setVal(e.target.value))}
-              placeholder="Amount to Swap"
+              placeholder="Amount to Swap "
             />
           </div>
           <button className="button" onClick={swap}>Swap</button>
@@ -123,7 +123,7 @@ return(
 
      <div className="rewardcal"><b>Reward Calculator</b><br/>
      <button className="button" onClick={rewardCal}> Calculate</button><br/>
-     <p>RWT Earning:- {rewardVal}</p>
+     <p>mRWT Earning:- {rewardVal}</p>
      <b>Withdrawl</b><br/>
      <div>
             <input

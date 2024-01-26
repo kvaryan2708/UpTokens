@@ -89,6 +89,25 @@ body {
   right:20%;
   position:fixed;
 }
+.home3{
+  background-color: hsl(120, 8%, 5%); /* Green */
+  border: none;
+  border-radius: 10px;
+  color: rgb(250, 245, 245);
+  padding: 10px 20px;
+   
+  text-decoration: none;
+  display: inline-block;
+  font-size: 19px;
+  margin: 0px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  top:85%;
+  left:24%;
+  right:20%;
+  position:fixed;
+}
 .box1{
   background-color: #f70828; /* Green */
   border: none;

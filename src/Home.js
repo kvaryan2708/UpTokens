@@ -24,6 +24,10 @@ function Home(){
             Use this Address <b>'0x1B10B5Ec31dB577f8316E6ABf0563F278A9aCD6C'</b> to import 
             <b> RWT Tokens </b>to your metamask wallet
         </div>
+        <div className="home3">
+           <b>1 STK= 10^(18) mSTK & 1 RWT=10^(18) mRWT</b>
+           
+        </div>
         </div>
     );
 }

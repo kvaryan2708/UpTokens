@@ -4,7 +4,7 @@ import "./App.css";
 import {toast} from "react-hot-toast"
 function WithdrawRWT({web3,contract1,contract2,contract3,account,address,getReward}){
     const [val,setVal]=useState();
-    const [num,setNum]=useState();
+    const [num,setNum]=useState(0);
 
     async function withdrawRWT() {
         
@@ -42,7 +42,7 @@ function WithdrawRWT({web3,contract1,contract2,contract3,account,address,getRewa
 
         <div className="App">
             
-            <div className="ethbal">Balance: {num} RWT</div>
+            <div className="ethbal">Balance: {num} mRWT</div>
 
             
              <div>

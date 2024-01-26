@@ -44,7 +44,7 @@ function BuyToken({web3,contract1,contract2,contract3,account,getBalance}){
               placeholder="Amount in Wei"
             />
           </div>
-          <p>{numtok} STK</p>
+          <p>{numtok} mSTK</p>
           <button className="button" onClick={buySTK}>Buy</button>
 
         </div>
