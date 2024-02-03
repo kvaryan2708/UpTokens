@@ -35,6 +35,12 @@ const [address,setAddress]=useState();
    
   });
   const [dictator,setDictator]=useState(false);
+  const [meta,setMeta]=useState(false)
+  function find(){
+  if(window.ethereum){
+    setMeta(true);
+  }
+}
     async function loadWeb3() {
       if (window.ethereum) {
         const web3 = new Web3(window.ethereum);
@@ -975,7 +981,7 @@ const [address,setAddress]=useState();
         }
        
       } else {
-        console.log("MetaMask is not installed. Please install it.");
+        alert("MetaMask is not installed. Please install it.");
       }
     }
     const [loading, setLoading] = useState(false);
@@ -984,32 +990,7 @@ const [address,setAddress]=useState();
     // if(account==='0x24e27593ca36a2A3D941B0fdC2B839a08484111c'){
     //   setDictator(true);
     // }
-    useEffect(() => {
-      const {web3}=state;
-      const handleTransaction = (status) => {
-        // Set loading based on the transaction status
-        setLoading(status === 'start');
-      };
-  
-      // Connect to MetaMask provider
-     
-  
-      // Listen for the 'transactionHash' event (start of the transaction)
-      window.ethereum.on('transactionHash', () => {
-        handleTransaction('start');
-      });
-  
-      // Listen for the 'receipt' event (end of the transaction)
-      window.ethereum.on('receipt', () => {
-        handleTransaction('end');
-      });
-  
-      return () => {
-        // Clean up event listeners when component unmounts
-        window.ethereum.removeAllListeners('transactionHash');
-        window.ethereum.removeAllListeners('receipt');
-      };
-    }, [state]);
+
     
 
 
@@ -1037,8 +1018,8 @@ const [address,setAddress]=useState();
  
 useEffect(()=>{
   
-  getBalance();getReward();
-},[getBalance,getReward])
+  getBalance();getReward();find();
+},[getBalance,getReward,find])
 const [val,setVal]=useState();
 const [numtoken,setNumtoken]=useState();
 
@@ -1133,8 +1114,9 @@ useEffect(() => {
 <Outlet/>
 </div>
    
-   
+   {meta ? (
    <User
+   
      web3={state.web3}
      contract1={state.contract1}
      contract2={state.contract2}
@@ -1144,19 +1126,20 @@ useEffect(() => {
      address={address}
      getBalance={getBalance}
      getReward={getReward}
-   />
+   />):(<User/>)}
    
   </> }>
 
-  <Route exact path="BuyToken" element={<BuyToken
+  <Route exact path="BuyToken" element={meta ?(<BuyToken
 web3={state.web3}
 contract1={state.contract1}
 contract2={state.contract2}
 contract3={state.contract3}
 
 account={account}
-getBalance={getBalance}/>}/>
-<Route exact path="Stake" element={<Stake
+getBalance={getBalance}
+/>):(<BuyToken/>)}/>
+<Route exact path="Stake" element={meta ?(<Stake
 web3={state.web3}
 contract1={state.contract1}
 contract2={state.contract2}
@@ -1165,9 +1148,10 @@ contract3={state.contract3}
 account={account}
 address={address}
 getBalance={getBalance}
-  stakedAmmount={stakedAmmount}/>}/>
+  stakedAmmount={stakedAmmount}
+  />):(<Stake/>)}/>
 
-<Route exact path="UnStake" element={<UnStake
+<Route exact path="UnStake" element={meta ?(<UnStake
 web3={state.web3}
 contract1={state.contract1}
 contract2={state.contract2}
@@ -1175,7 +1159,7 @@ contract3={state.contract3}
 
 account={account}
 getBalance={getBalance}
-/>}/>
+/>):(<UnStake/>)}/>
    </Route>      
  
 
@@ -1206,20 +1190,22 @@ STK
 <Outlet/>
 </div>
    
-   <Owner account={account}/>
+   <Owner 
+   account={account}
+   />
   
    
   </> }>
 
-  <Route exact path="WithdrawEth" element={<WithdrawEth
+  <Route exact path="WithdrawEth" element={meta ?(<WithdrawEth
 web3={state.web3}
 contract1={state.contract1}
 contract2={state.contract2}
 contract3={state.contract3}
 
 account={account}
-/>}/>
-<Route exact path="WithdrawSTK" element={<WithdrawSTK
+/>):(<WithdrawEth/>)}/>
+<Route exact path="WithdrawSTK" element={meta ?(<WithdrawSTK
 web3={state.web3}
 contract1={state.contract1}
 contract2={state.contract2}
@@ -1227,9 +1213,10 @@ contract3={state.contract3}
 
 account={account}
 address={address}
-getBalance={getBalance}/>}/>
+getBalance={getBalance}
+/>):(<WithdrawSTK/>)}/>
 
-<Route exact path="WithdrawRWT" element={<WithdrawRWT
+<Route exact path="WithdrawRWT" element={meta ?(<WithdrawRWT
 web3={state.web3}
 contract1={state.contract1}
 contract2={state.contract2}
@@ -1238,7 +1225,7 @@ contract3={state.contract3}
 account={account}
 address={address}
 getReward={getReward}
-/>}/>
+/>):(<WithdrawRWT/>)}/>
    </Route>      
  
  </Routes>
