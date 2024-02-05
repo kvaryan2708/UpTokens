@@ -460,7 +460,7 @@ top:70px;
       left:38%;
     }
     .box{
-      font-size: 14px;
+      font-size: 16px;
      
     
     
@@ -468,23 +468,24 @@ top:70px;
       left:22%;
     }
     .tokenEthSwap{
-      font-size: 14px;
+      font-size: 11px;
      
     
     
-      top:440px;
+      top:460px;
       left:0%;
     }
     .rewardcal{
-      font-size: 12px;
+      font-size: 11px;
      
     
     
-      top:440px;
-      left:44%;
+      top:460px;
+      left:47%;
     }
     .box1{
       left:1%;
+      font-size:24px;
 
     }
     .hj{
