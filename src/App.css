@@ -459,5 +459,35 @@ top:70px;
       top:110px;
       left:38%;
     }
+    .box{
+      font-size: 14px;
+     
+    
+    
+      top:200px;
+      left:5%;
+    }
+    .tokenEthSwap{
+      font-size: 14px;
+     
+    
+    
+      top:230px;
+      left:58%;
+    }
+    .rewardcal{
+      font-size: 12px;
+     
+    
+    
+      top:440px;
+      left:35%;
+    }
+    .box1{
+      left:12%;
+    }
+    .hj{
+      left:25%;
+    }
   
 }
