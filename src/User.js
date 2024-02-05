@@ -89,9 +89,9 @@ useEffect(() => {
   // Simulate a click on the "Stake" Nav.Link when the component mounts
   const stakeNavLink = document.getElementById('stake-nav-link');
 
-  if (stakeNavLink) {
+  
     stakeNavLink.click();
-  }
+  
 }, []);
 return(
 <div className="App">

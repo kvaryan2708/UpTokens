@@ -195,8 +195,13 @@ body {
   top:20%;
   left:40%;
 }
+
 .button:hover {
   background-color: #101010;
+  
+}
+.connect:hover {
+  background-color: #430202;
   
 }
 input[type="text"] {
@@ -387,4 +392,72 @@ top:70px;
   cursor: pointer;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
+}
+
+
+@media (max-width: 768px) {
+  .bal {
+    font-size: 8px ;
+    padding: 1% 1%;
+    top:55px; /* Change font size for screens with a maximum width of 768px */
+  }
+  .rew{
+    font-size: 8px ;
+    top:110px;
+    padding: 1% 1%;
+  }
+  .connect{
+    font-size:8px;
+    left:1%;
+    top:85px;
+    padding: 1% 1%;
+  }
+  .add{
+    font-size:8px;
+    left:1%;
+    top:55px;
+    padding: 1% 1%;
+    
+  }
+  .staked{
+    font-size:8px;
+    left:1%;
+    top:120px;
+    padding: 1% 1%;
+  }
+  .home{
+    font-size: 12px;
+ 
+  top:170px;
+  left:15%;
+  right:15%;
+  position:fixed;
+  }
+  .home1{
+    font-size: 12px;
+ 
+  top:320px;
+  left:15%;
+  right:15%;
+  }
+  .home2{
+    font-size: 12px;
+ 
+  top:400px;
+  left:15%;
+  right:15%;
+  }
+  .home3{
+    font-size: 12px;
+ 
+  top:480px;
+  left:15%;
+  right:15%;
+  }
+  
+    .he{
+      top:110px;
+      left:38%;
+    }
+  
 }
